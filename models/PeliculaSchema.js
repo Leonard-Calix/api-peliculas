@@ -12,7 +12,7 @@ let schema = new Schema({
         type: String,
         default : 'https://cookmepal.allianzcloud.com/public/frontend/img/default-img.png'
     },
-    calificaion :{
+    calificacion :{
         type: Number,
         require : true
     },

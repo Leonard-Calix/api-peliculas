@@ -40,7 +40,7 @@ const obtenerPelicula = async (req = request, res = response) => {
 const guardarPelicula = async (req = request, res = response) => {
     try {
 
-        const { nombre, descripcion, urlImagen, calificaion, fechaEstreno } = req.body;
+        const { nombre, descripcion, urlImagen, calificacion, fechaEstreno } = req.body;
 
         const validarCampos = validarCamposBody(req.body);
 
@@ -58,7 +58,7 @@ const guardarPelicula = async (req = request, res = response) => {
             nombre,
             descripcion,
             urlImagen,
-            calificaion,
+            calificacion,
             fechaEstreno
         });
 
@@ -75,7 +75,7 @@ const editarPeliculas = async (req = request, res = response) => {
     try {
 
         const { id } = req.params;
-        const { descripcion, urlImagen, calificaion, fechaEstreno } = req.body;
+        const { descripcion, urlImagen, calificacion, fechaEstreno } = req.body;
 
         const validarCampos = validarCamposBody(req.body);
 
@@ -93,7 +93,7 @@ const editarPeliculas = async (req = request, res = response) => {
         pelicula.descripcion = descripcion;
         pelicula.urlImagen = urlImagen;
         pelicula.fechaEstreno = fechaEstreno;
-        pelicula.calificaion = calificaion;
+        pelicula.calificacion = calificacion;
 
         await pelicula.save();
 
@@ -128,7 +128,7 @@ const obtenerMensaje = (mensaje, data = null) => {
     return { mensaje, data }
 }
 
-const validarCamposBody = ({ nombre, descripcion, calificaion, fechaEstreno }) => {
+const validarCamposBody = ({ nombre, descripcion, calificacion, fechaEstreno }) => {
 
     if (!nombre) {
         return { mensaje : 'Nombre no debe de ser vacia', data : null }
