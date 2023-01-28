@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body class="container bg-light">
+
+    <div class="card mt-5">
+        <div class="card-header">
+            Docuemetacion
+        </div>
+        <div class="row card-body">
+            <div class="col-md-4">
+                <img class="img-fluid" src="https://www.servicetonic.com/wp-content/uploads/2020/10/API-Interface-Servicetonic.png" alt="">
+            </div>
+            <div class="col-md-8">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Metodo</th>
+                            <th scope="col">Ruta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Obtener las peliculas</td>
+                            <td>Obtiene todas las peliculas</td>
+                            <td>GET</td>
+                            <td><a href="http://localhost:4000/api/peliculas" >http://localhost:4000/api/peliculas</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Obtener pelicula por id</td>
+                            <td>Obtiene una pelicula</td>
+                            <td>GET</td>
+                            <td>http://localhost:4000/api/peliculas/{id}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Guardar una pelicula</td>
+                            <td>Guardar una pelicula</td>
+                            <td>POST</td>
+                            <td>http://localhost:4000/api/peliculas</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Actualizar una pelicula</td>
+                            <td>Actualizar una pelicula</td>
+                            <td>PUT</td>
+                            <td>http://localhost:4000/api/peliculas/{id}</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Eliminar una pelicula</td>
+                            <td>Elimina una pelicula</td>
+                            <td>DELETE</td>
+                            <td>http://localhost:4000/api/peliculas/{id}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+
+                <p>Objeto Pelicula</p>
+
+                <code class="form-control">
+                    pelicula = {
+                        nombre: 'Capitán América: el primer vengador',
+                        descripcion: 'Inicio del caapitan america',
+                        urlImagen: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ9bzgPehP3vvkuul9oNnk3bX6TjclMtVjLWM9S3GvtHknLHCBX',
+                        calificaion: 5,
+                        fechaEstreno: '10-10-2011'
+                    }
+                </code>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
